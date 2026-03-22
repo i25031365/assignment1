@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangzhou — Jiangnan Paradise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* 方案一：水墨江南配色 */
+      --teal-green: #4A8572;     /* 西湖青 */
+      --misty-blue: #8EA3B0;     /* 烟雨蓝 */
+      --silk-white: #F7F8F7;     /* 宣纸白 */
+      --osmanthus-gold: #D4A259; /* 桂花金 */
+      --charcoal-grey: #2F363A;  /* 瓦楠灰 */
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 动态渐变背景 - 改为烟雨青蓝色调 */
+    body {
+      background: linear-gradient(-45deg, var(--charcoal-grey), var(--teal-green), var(--misty-blue), var(--charcoal-grey));
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Noto Serif SC', 'EB Garamond', Georgia, serif;
+      overflow: hidden;
+    }
+
+    @keyframes gradient {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* 居中卡片 */
+    .card {
+      position: relative;
+      width: 520px;
+      padding: 3.5rem 3rem;
+      text-align: center;
+      border: 1px solid var(--osmanthus-gold);
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      background: rgba(47, 54, 58, 0.65); /* 使用瓦楠灰作为半透明底色 */
+      backdrop-filter: blur(5px);
+    }
+
+    /* 角落装饰 */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 8px; left: 8px;
+      width: 40px; height: 40px;
+      border-top: 1px solid var(--osmanthus-gold);
+      border-left: 1px solid var(--osmanthus-gold);
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: 8px; right: 8px;
+      width: 40px; height: 40px;
+      border-bottom: 1px solid var(--osmanthus-gold);
+      border-right: 1px solid var(--osmanthus-gold);
+    }
+
+    .eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.5em;
+      color: var(--osmanthus-gold);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-weight: 900;
+      color: var(--silk-white);
+      line-height: 1.05;
+      margin-bottom: 0.2em;
+    }
+
+    .title span {
+      color: var(--osmanthus-gold);
+      display: block;
+      font-size: 0.55em;
+      font-weight: 400;
+      letter-spacing: 0.4em;
+      margin-top: 0.3em;
+      font-family: 'Noto Serif SC', serif;
+    }
+
+    .divider {
+      width: 50px;
+      height: 1px;
+      background: var(--osmanthus-gold);
+      margin: 1.5rem auto;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--silk-white);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .cta {
+      display: inline-block;
+      font-family: 'Cinzel', serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--charcoal-grey);
+      background: var(--osmanthus-gold);
+      padding: 0.9rem 2.2rem;
+      text-decoration: none;
+      border-top-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    }
+
+    .cta:hover {
+      background: var(--silk-white);
+      color: var(--teal-green);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 580px) {
+      .card { width: 90vw; padding: 2.5rem 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <p class="eyebrow">Paradise on Earth</p>
+    <h1 class="title">
+      Hangzhou
+      <span>杭州</span>
+    </h1>
+    <div class="divider"></div>
+    <p class="tagline">
+      Poetic Jiangnan.<br>
+      Timeless elegance.<br>
+      One vibrant city.
+    </p>
+    <a href="hangzhou.html" class="cta">Explore Hangzhou →</a>
+  </div>
+
+</body>
+</html>

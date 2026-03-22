@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Hangzhou</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal-green: #4A8572;
+      --misty-blue: #8EA3B0;
+      --silk-white: #F7F8F7;
+      --osmanthus-gold: #D4A259;
+      --charcoal-grey: #2F363A;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--silk-white);
+      color: var(--charcoal-grey);
+      font-family: 'Noto Serif SC', Georgia, serif;
+      line-height: 1.6;
+    }
+
+    /* 顶部导航与标题区 */
+    header {
+      background-color: var(--teal-green);
+      color: var(--silk-white);
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      color: var(--osmanthus-gold);
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      transition: color 0.3s;
+    }
+
+    .back-btn:hover {
+      color: var(--silk-white);
+    }
+
+    header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.5rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-style: italic;
+      color: var(--misty-blue);
+    }
+
+    /* 景点内容区 - 网格布局 */
+    .container {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+
+    /* 景点卡片 */
+    .spot-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(47, 54, 58, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-bottom: 3px solid var(--teal-green);
+    }
+
+    .spot-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(47, 54, 58, 0.15);
+    }
+
+    .spot-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background-color: var(--misty-blue); /* 图片未加载时的占位色 */
+    }
+
+    .spot-content {
+      padding: 2rem;
+    }
+
+    .spot-title {
+      color: var(--teal-green);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .spot-desc {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: justify;
+    }
+
+    /* 页脚 */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--charcoal-grey);
+      color: var(--misty-blue);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+    <h1>Discover Hangzhou</h1>
+    <p>Journey through the poetic landscapes of Jiangnan</p>
+  </header>
+
+  <main class="container">
+    <article class="spot-card">
+      <img src="images/1.jpg" alt="A serene view of West Lake in Hangzhou, featuring calm waters and traditional Jiangnan scenery." class="spot-image">
+      <div class="spot-content">
+        <h2 class="spot-title">🌊 West Lake</h2>
+        <p class="spot-desc">West Lake is the heart of Hangzhou, celebrated as “Paradise on Earth.” Its scenic beauty blends with rich cultural heritage. Famous spots like Su Causeway, Three Pools Mirroring the Moon, and Leifeng Pagoda offer unique charm in every season. Walking, cycling, or boating here reveals the poetic essence of Jiangnan.</p>
+      </div>
+    </article>
+
+    <article class="spot-card">
+      <img src="images/2.jpg" alt="Aerial view of Qiandao Lake, showing multiple lush green islands scattered across crystal-clear blue water." class="spot-image">
+      <div class="spot-content">
+        <h2 class="spot-title">🏞 Qiandao Lake</h2>
+        <p class="spot-desc">Qiandao Lake, or “Thousand Island Lake,” is renowned for its crystal-clear waters and over 1,000 emerald islands. Known as “the world’s most beautiful waters,” it’s ideal for boat cruises and enjoying local organic fish cuisine. The lake’s vast expanse resembles a natural masterpiece.</p>
+      </div>
+    </article>
+
+    <article class="spot-card">
+      <img src="images/3.jpg" alt="The lush green waterways of Xixi National Wetland Park, representing a tranquil natural escape within the city." class="spot-image">
+      <div class="spot-content">
+        <h2 class="spot-title">🌿 Xixi Wetland</h2>
+        <p class="spot-desc">Xixi National Wetland Park is China’s first national wetland reserve, combining urban wetlands, farming traditions, and natural ecology. With winding waterways and abundant wildlife, it’s perfect for eco-tours, photography, and leisure walks. A tranquil escape within the city.</p>
+      </div>
+    </article>
+
+    <article class="spot-card">
+      <img src="images/4.jpg" alt="The ancient architecture of Lingyin Temple surrounded by dense forest, showcasing centuries of spiritual culture." class="spot-image">
+      <div class="spot-content">
+        <h2 class="spot-title">🕍 Lingyin Temple</h2>
+        <p class="spot-desc">Founded in the Eastern Jin Dynasty, Lingyin Temple is one of China’s most famous Buddhist temples. Its halls are filled with incense, while the nearby Feilai Peak features exquisite stone carvings. Visitors come to seek blessings and experience centuries of spiritual culture.</p>
+      </div>
+    </article>
+
+    <article class="spot-card">
+      <img src="images/5.jpg" alt="Traditional Jiangnan water town of Wuzhen, featuring historic houses and ancient bridges along a calm flowing canal." class="spot-image">
+      <div class="spot-content">
+        <h2 class="spot-title">🚤 Wuzhen</h2>
+        <p class="spot-desc">Wuzhen is a classic Jiangnan water town, where ancient bridges, flowing canals, and Ming–Qing architecture create timeless charm. By day, boat rides reveal historic alleys; by night, lanterns reflect on the water, offering a magical atmosphere. A living museum of traditional life.</p>
+      </div>
+    </article>
+
+    <article class="spot-card">
+      <img src="images/6.jpg" alt="The natural landscape and ancient ruins at the Liangzhu Archaeological Site, highlighting a 5,000-year-old civilization." class="spot-image">
+      <div class="spot-content">
+        <h2 class="spot-title">🏛 Liangzhu</h2>
+        <p class="spot-desc">The Liangzhu site showcases a 5,000-year-old civilization and is listed as a UNESCO World Heritage Site. Ancient city ruins, jade artifacts, and water systems highlight the brilliance of Neolithic China. Walking through the park feels like traveling back to the dawn of Chinese civilization.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Hangzhou Tourism. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
